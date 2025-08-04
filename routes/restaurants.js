@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const pool = require('../config/database');
+const pool = require('../config/database'); // Используем готовый pool
+
+// НЕ импортируем Pool повторно!
+// const { Pool } = require('pg'); // ← Удалить эту строку!
 
 // Получить все заведения
 router.get('/', async (req, res) => {
@@ -142,19 +145,3 @@ router.delete('/:id', async (req, res) => {
 });
 
 module.exports = router;
-
-// Простое логирование ошибок
-router.use((err, req, res, next) => {
-    console.error('API Error:', {
-        timestamp: new Date().toISOString(),
-        method: req.method,
-        url: req.url,
-        error: err.message,
-        stack: process.env.NODE_ENV === 'development' ? err.stack : undefined
-    });
-    
-    res.status(500).json({ 
-        error: 'Внутренняя ошибка сервера',
-        timestamp: new Date().toISOString()
-    });
-});
