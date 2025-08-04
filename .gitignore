@@ -1,0 +1,62 @@
+# Переменные окружения и секреты
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# Зависимости Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Логи
+logs/
+*.log
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Временные файлы
+.tmp/
+tmp/
+temp/
+
+# Кэш и сборка
+.cache/
+dist/
+build/
+.next/
+.nuxt/
+
+# IDE и редакторы
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Операционная система
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Резервные копии
+*.bak
+*.backup
+*.old
+
+# SSL сертификаты (если будут)
+*.pem
+*.key
+*.crt
+
+# Файлы конфигурации продакшена
+config/production.json
