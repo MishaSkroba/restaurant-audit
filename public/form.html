@@ -38,8 +38,11 @@
         <div class="row">
             <div class="col-md-12">
                 <h1 class="mb-4">Форма аудита заведения</h1>
+
+                <!-- Контейнер для уведомлений -->
+                <div id="alertContainer" class="mb-4"></div>
                 
-                <form id="restaurantForm">
+                <form id="restaurantForm" novalidate>
                     <!-- Основная информация -->
                     <div class="form-section">
                         <h3 class="section-title">Основная информация</h3>
@@ -132,7 +135,7 @@
                     <div class="form-section">
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                             <a href="index.html" class="btn btn-secondary me-md-2">Отмена</a>
-                            <button type="submit" class="btn btn-success">Сохранить заведение</button>
+                            <button type="submit" id="submitBtn" class="btn btn-success btn-lg">Сохранить заведение</button>
                         </div>
                     </div>
                 </form>
